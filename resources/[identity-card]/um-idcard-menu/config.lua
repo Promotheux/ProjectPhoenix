@@ -7,14 +7,14 @@ Config.NPC = {
 
 Config.MenuCards = {
     {
-        title = 'ID Card',
+        title = 'ID Kaart',
         icon = 'id-card',
         args = {
             itemName = 'id_card'
         }
     },
     {
-        title = 'Driver License',
+        title = 'Rijbewijs',
         icon = 'car',
         args = {
             itemName = 'driver_license'
