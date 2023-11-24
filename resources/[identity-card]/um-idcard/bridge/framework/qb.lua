@@ -11,7 +11,7 @@ local function GetStringSex(sexString)
     if sexString ~= 1 then
         sexString = 'M'
     else
-        sexString = 'F'
+        sexString = 'V'
     end
     return sexString
 end
