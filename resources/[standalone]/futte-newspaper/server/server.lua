@@ -56,7 +56,7 @@ RegisterNetEvent('newspaper:buy', function(type)
             TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['newspaper'], "add")
             Player.Functions.AddItem(type, 1)
         else
-            TriggerClientEvent('QBCore:Notify', source, '$' .. Config.Price .. ' required for buying a newspaper',
+            TriggerClientEvent('QBCore:Notify', source, '€' .. Config.Price .. ' is nodig om een krant te kunnen kopen',
                 'error')
         end
     end

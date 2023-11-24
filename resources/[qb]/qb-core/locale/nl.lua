@@ -26,7 +26,7 @@ local Translations = {
         teleported_waypoint = 'Geteleporteerd naar bestemming',
     },
     info = {
-        received_paycheck = 'Je hebt je salaris ontvangen van $%{value}',
+        received_paycheck = 'Je hebt je salaris ontvangen van €%{value}',
         job_info = 'Job: %{value} | Graad: %{value2} | Dienst: %{value3}',
         gang_info = 'Gang: %{value} | Graad: %{value2}',
         on_duty = 'U bent nu in dienst!',

@@ -10,4 +10,10 @@ Shared.location = {
         heading = 271.05,
         handle = nil
     },
+    [2] = {
+        model = "cs_mrs_thornhill",
+        pos = vec3(151.81, -2204.04, 4.69),
+        heading = 49.18,
+        handle = nil
+    },
 }

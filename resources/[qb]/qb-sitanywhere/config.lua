@@ -63,8 +63,8 @@ Config.UseTargetingCoords = true
 Config.Targeting = {
     SitIcon = "fas fa-chair",
     LayIcon = "fas fa-bed",
-    SitLabel = "Sit Down",
-    LayLabel = "Lay Down",
+    SitLabel = "Ga zitten",
+    LayLabel = "Ga liggen",
 }
 
 -- The localization for the notifications, chat suggestions and keymapping.
@@ -95,7 +95,7 @@ Config.Lang = {
         -- %s is automatically replaced with the key they need to press.
         SitDown = "Press %s to sit down",
         LayDown = "Press %s to lay down",
-        GetUp = "Press %s to get up"
+        GetUp = "Druk op %s om op te staan"
     },
 
     -- Description in Settings>Key Bindings>Fivem

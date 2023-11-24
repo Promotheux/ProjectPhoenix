@@ -3,13 +3,13 @@ Config = Config or {}
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 
 Config.AvailableJobs = { -- Only used when not using qb-jobs.
-    ["trucker"] = {["label"] = "Trucker", ["isManaged"] = false},
+    ["trucker"] = {["label"] = "Vrachtwagen chauffeur", ["isManaged"] = false},
     ["taxi"] = {["label"] = "Taxi", ["isManaged"] = false},
-    ["tow"] = {["label"] = "Tow Truck", ["isManaged"] = false},
-    ["reporter"] = {["label"] = "News Reporter", ["isManaged"] = false},
-    ["garbage"] = {["label"] = "Garbage Collector", ["isManaged"] = false},
-    ["bus"] = {["label"] = "Bus Driver", ["isManaged"] = false},
-    ["hotdog"] = {["label"] = "Hot Dog Stand", ["isManaged"] = false}
+    ["tow"] = {["label"] = "Sleepwagen", ["isManaged"] = false},
+    ["reporter"] = {["label"] = "Nieuws Reporter", ["isManaged"] = false},
+    ["garbage"] = {["label"] = "Vuilniswagen", ["isManaged"] = false},
+    ["bus"] = {["label"] = "Bus Chaffeur", ["isManaged"] = false},
+    ["hotdog"] = {["label"] = "Hot Dog Kraam", ["isManaged"] = false}
 }
 
 Config.Cityhalls = {
@@ -21,20 +21,20 @@ Config.Cityhalls = {
             display = 4,
             scale = 0.65,
             colour = 0,
-            title = "City Services"
+            title = "Stadhuis"
         },
         licenses = {
             ["id_card"] = {
-                label = "ID Card",
+                label = "ID Kaart",
                 cost = 50,
             },
             ["driver_license"] = {
-                label = "Driver License",
+                label = "Rijbewijs",
                 cost = 50,
                 metadata = "driver"
             },
             ["weaponlicense"] = {
-                label = "Weapon License",
+                label = "Wapenlicentie",
                 cost = 50,
                 metadata = "weapon"
             },

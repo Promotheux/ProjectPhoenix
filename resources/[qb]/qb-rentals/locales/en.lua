@@ -1,19 +1,19 @@
 local Translations = {
     info = {
-        ["air_veh"] = "Aircraft Rentals",
-        ["land_veh"] = "Vehicle Rentals",
-        ["sea_veh"] = "Boat Rentals",
+        ["air_veh"] = "Vliegtuig huren",
+        ["land_veh"] = "Voertuig huren",
+        ["sea_veh"] = "Boot huren",
     },
     error = {
-        ["not_enough_space"] = "%{vehicle} is in the way!",
-        ["not_enough_money"] = "You do not have enough money!",
-        ["no_vehicle"] = "No vehicle to return!",
-        ["no_driver_license"] = "You do not have a driver license!",
-        ["no_pilot_license"] = "You do not have a pilot license!"
+        ["not_enough_space"] = "%{vehicle} staat in de weg!",
+        ["not_enough_money"] = "Je hebt niet genoeg geld",
+        ["no_vehicle"] = "Je hebt geen voertuig om terug te brengen",
+        ["no_driver_license"] = "Je hebt geen rijbewijs",
+        ["no_pilot_license"] = "Je hebt geen vliegbrevet"
     },
     task = {
-        ["return_veh"] = "Return your rented vehicle.",
-        ['veh_returned'] = 'Vehicle Returned!'
+        ["return_veh"] = "Breng jouw gehuurde voertuig terug",
+        ['veh_returned'] = 'Voertuig ingeleverd'
     }
 }
 Lang = Locale:new({phrases = Translations, warnOnMissing = true})

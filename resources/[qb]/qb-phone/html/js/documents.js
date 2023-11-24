@@ -3,7 +3,7 @@ var DocEndtext = null
 var DocEndid = null
 var DocEndcitizenid = null
 var ExtraButtonsOpen = false;
-var MonthFormatting = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var MonthFormatting = ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"];
 
 $(document).ready(function(){
     $("#documents-search").on("keyup", function() {
@@ -59,7 +59,7 @@ function getDocuments(){
     $(this).parents('.documents-dropdown').find('span').text($(this).text());
     $(this).parents('.documents-dropdown').find('input').attr('value', $(this).attr('id'));
     $(".documents-list").html(""); // Frown Face before loading any contents if any!
-        var AddOption = '<div class="casino-text-clear">Nothing Here!</div>'+
+        var AddOption = '<div class="casino-text-clear">Niets gevonden!</div>'+
         '<div class="casino-text-clear" style="font-size: 500%;color: #FFFFFF;"><i class="fas fa-frown"></i></div>'
     $('.documents-list').append(AddOption);
 
@@ -93,9 +93,9 @@ function AddDocuments(data){
 
 function LoadGetNotes(){
     $(".documents-dropdown-menu").html("");
-    var Shitter = '<li id="documents-docs" data-title="Documents">Documents' +
-        '<li id="documents-licenses" data-title="Licenses">Licenses</li>' +
-        '<li id="documents-vehicle" data-title="Vehicle">Vehicle Registrations</li>' +
+    var Shitter = '<li id="documents-docs" data-title="Documents">Documenten' +
+        '<li id="documents-licenses" data-title="Licenses">Licenties</li>' +
+        '<li id="documents-vehicle" data-title="Vehicle">Voertuigregistraties</li>' +
     '</li>';
 
     $('.documents-dropdown-menu').append(Shitter);
@@ -163,14 +163,14 @@ $(document).on('click', '#documents-vehicle', function(e) {
                 
                         var AddOption = '<div class="documents-test">' + 
                             '<div class="documents-title-title">'+Fulltext+'</div>' +
-                            '<div class="documents-title-icon-registration" data-title="'+vehicle.fullname+'" data-text="<b><center><u>San Andreas DMV</u></b></center><p><p><b>Name: </b>'+vehicle.brand+'</p></p><p><b>Model: </b>'+vehicle.model+'</p><p><b>Plate: </b>'+vehicle.plate+'</p><p><b>Owner: </b>'+FirstName+' '+LastName+'</p><p><b><center>Official State Document Of San Andreas</p></b></center>"><i class="fas fa-eye"></i></div>'+
+                            '<div class="documents-title-icon-registration" data-title="'+vehicle.fullname+'" data-text="<b><center><u>Kentekenbewijs</u></b></center><p><p><b>Naam: </b>'+vehicle.brand+'</p></p><p><b>Model: </b>'+vehicle.model+'</p><p><b>Kenteken: </b>'+vehicle.plate+'</p><p><b>Eigenaar: </b>'+FirstName+' '+LastName+'</p><p><b><center></p></b></center>"><i class="fas fa-eye"></i></div>'+
                         '</div>';
                 
                         $('.documents-list').append(AddOption);
                     }
             });
         } else {
-            var AddOption = '<div class="casino-text-clear">Nothing Here!</div>'+
+            var AddOption = '<div class="casino-text-clear">Niets gevonden!</div>'+
             '<div class="casino-text-clear" style="font-size: 500%;color: #0d1218c0;"><i class="fas fa-frown"></i></div>'
         $('.documents-list').append(AddOption);
         }
@@ -202,14 +202,14 @@ $(document).on('click', '#documents-licenses', function(e) {
                 var AddOption = `
                 <div class="documents-test">
                     <div class="documents-title-title">${Fulltext}</div>
-                    <div class="documents-title-icon-registration" data-title=${Fulltext} data-text="<b><u>Issued To</u></b><p><p><b>Name: </b>${FirstName} ${LastName}</p></p></b><p><b>ID: </b>${StateId}</p></b><p><b>Sex: </b>${label}</p></b><p><b><u>Issued By</u></b></p><p><b>Name: </b>State Account</p><p><b><center>Official Document Of San Andreas</p></b></center>"><i class="fas fa-eye"></i></div>
+                    <div class="documents-title-icon-registration" data-title=${Fulltext} data-text="<b><u>Uitgegeven aan</u></b><p><p><b>Naam: </b>${FirstName} ${LastName}</p></p></b><p><b>ID: </b>${StateId}</p></b><p><b>Geslacht: </b>${label}</p></b><p><b><u>Uitgegeven door</u></b></p><p><b>Naam: </b>State Account</p><p><b><center>Official Document Of San Andreas</p></b></center>"><i class="fas fa-eye"></i></div>
                 </div>`
         
                 $('.documents-list').append(AddOption);
             }
         }
     } else {
-        var AddOption = '<div class="casino-text-clear">Nothing Here!</div>'+
+        var AddOption = '<div class="casino-text-clear">Niets gevonden!</div>'+
         '<div class="casino-text-clear" style="font-size: 500%;color: #0d1218c0;"><i class="fas fa-frown"></i></div>'
     $('.documents-list').append(AddOption);
     }
@@ -286,7 +286,7 @@ $(document).on('click', '.documents-title-icon-registration', function(e){
     var AnotherOption = `
     <div class="document-body-class-body-main">
         <div class="documents-extras-button-registration"><i class="fas fa-ellipsis-v"></i></div>
-        <div class="documents-input-title-list">Title</div>
+        <div class="documents-input-title-list">Titel</div>
         <div class="documents-input-title-name">${DocEndtitle}</div>
         <div class="documents-input-tags"><i class="fas fa-tags"></i></div>
         <div class="documents-input-back"><i class="fas fa-chevron-left"></i></div>
@@ -338,7 +338,7 @@ $(document).on('click', '.documents-title-icon', function(e){
     var AnotherOption = `
     <div class="document-body-class-body-main">
         <div class="documents-extras-button"><i class="fas fa-ellipsis-v"></i></div>
-        <div class="documents-input-title-list">Title</div>
+        <div class="documents-input-title-list">Titel</div>
         <div class="documents-input-title-name">${DocEndtitle}</div>
         <div class="documents-input-tags"><i class="fas fa-tags"></i></div>
         <div class="documents-input-back"><i class="fas fa-chevron-left"></i></div>

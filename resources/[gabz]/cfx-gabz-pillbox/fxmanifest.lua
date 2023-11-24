@@ -1,22 +1,36 @@
-fx_version 'cerulean'
+fx_version 'adamant'
 game 'gta5'
-author 'Gabz'
-description 'Pillbox'
-version '1.0.0'
-lua54 'yes'
+
 this_is_a_map 'yes'
 
-dependencies { 
-    '/server:4960',     -- ⚠️PLEASE READ⚠️; Requires at least SERVER build 4960.
-    '/gameBuild:2545',  -- ⚠️PLEASE READ⚠️; Requires at least GAME build 2545.
-    'cfx-gabz-mapdata', -- ⚠️PLEASE READ⚠️; Requires [cfx-gabz-mapdata] to work properly.
+file 'gabz_timecycle_mods_1.xml'
+data_file 'TIMECYCLEMOD_FILE' 'gabz_timecycle_mods_1.xml'
+
+client_script {
+  "main.lua"
 }
 
-server_scripts {
-    'version_check.lua',
-}
 
-escrow_ignore {
-    'stream/**/*.ytd',
-}
-dependency '/assetpacks'
+
+
+
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--
+---rare5m.co - https://discord.gg/97hgBVHCvC--

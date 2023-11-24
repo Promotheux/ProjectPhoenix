@@ -21,7 +21,7 @@ RegisterNetEvent('qb-trashsearch:client:searchtrash', function()
                     dumpsterFound = true
                 end
                 if i == #searched and dumpsterFound then
-                    QBCore.Functions.Notify('This dumpster has already been searched', 'error')
+                    QBCore.Functions.Notify('Deze afvalbak is al doorzocht', 'error')
                 elseif i == #searched and not dumpsterFound then
 
                 local itemType = math.random(#Config.RewardTypes)
@@ -54,7 +54,7 @@ end
 RegisterNetEvent('qb-trashsearch:client:progressbar', function(itemType)
 	local src = source
     local ply = QBCore.Functions.GetPlayerData()
-    QBCore.Functions.Progressbar("trash_find", "Dumpster Diving", 12000, false, true, {
+    QBCore.Functions.Progressbar("trash_find", "Afvalbak doorzoeken", 12000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
         disableMouse = false,
@@ -66,20 +66,18 @@ RegisterNetEvent('qb-trashsearch:client:progressbar', function(itemType)
     }, {}, {}, function() -- Done
         StopAnimTask(PlayerPedId(), "amb@prop_human_bum_bin@idle_b", "idle_d", 1.0)
         if Config.RewardTypes[itemType].type == "item" then
-            QBCore.Functions.Notify("Looks like you found something", "success")
-            QBCore.Functions.Notify("You smell like shit")
+            QBCore.Functions.Notify("Je hebt iets gevonden", "success")
             TriggerServerEvent('qb-trashsearch:server:recieveItem')
         elseif Config.RewardTypes[itemType].type == "money" then
-            QBCore.Functions.Notify("You found some cash", "success")
-            QBCore.Functions.Notify("You smell like shit")
-            TriggerServerEvent('qb-trashsearch:server:givemoney', math.random (21, 39))
+            cash = math.random (4, 12)
+            QBCore.Functions.Notify("Je hebt €" .. cash .. ",- cash gevonden", "success")
+            TriggerServerEvent('qb-trashsearch:server:givemoney', cash)
         elseif Config.RewardTypes[itemType].type == "nothing" then
-            QBCore.Functions.Notify("You found nothing", "error")
-            QBCore.Functions.Notify("You smell like shit")
+            QBCore.Functions.Notify("Je hebt niks gevonden", "error")
         end
     end, function() -- Cancel
         StopAnimTask(PlayerPedId(), "amb@prop_human_bum_bin@idle_b", "idle_d", 1.0)
-        QBCore.Functions.Notify("Stopped Searching", "error")
+        QBCore.Functions.Notify("Gestopt met zoeken", "error")
     end)
 end)
 
@@ -89,7 +87,7 @@ RegisterNetEvent('qb-dumpsters:client:open:Dumpster:storage')
 AddEventHandler('qb-dumpsters:client:open:Dumpster:storage', function()
     local DumpsterFound = ClosestContainer()
     if DumpsterFound == nil then 
-        QBCore.Functions.Notify("Get closer or face directly at the bin.")
+        QBCore.Functions.Notify("Ga dichterbij staan of kijk recht naar de afvalbak.")
         return
     end
     local Dumpster = 'Container | '..math.floor(DumpsterFound.x).. ' | '..math.floor(DumpsterFound.y)..' |'
@@ -138,13 +136,13 @@ exports['qb-target']:AddTargetModel(trashCans, {
             type = "client",
             event = "qb-trashsearch:client:searchtrash",
             icon = "fas fa-dumpster",
-            label = "Dumpster Dive",
+            label = "Afvalbak doorzoeken",
         },
         {
             type = "client",
             event = "qb-dumpsters:client:open:Dumpster:storage",
             icon = "far fa-trash-alt",
-            label = "Open Bin",
+            label = "Open afvalbak",
         },
     },
     distance = 3.0

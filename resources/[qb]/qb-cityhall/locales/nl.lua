@@ -3,21 +3,21 @@ local Translations = {
         not_in_range = 'Te ver van het stadhuis'
     },
     success = {
-        recived_license = 'U heeft uw %{value} ontvangen voor $50'
+        recived_license = 'U heeft uw %{value} ontvangen voor €50'
     },
     info = {
-        new_job_app = 'Your application was sent to the boss of (%{job})',
+        new_job_app = 'Je sollicitatie is verstuurd naar de baas van (%{job})',
         bilp_text = 'Stadsdiensten',
         city_services_menu = '~g~E~w~ - Stadsdiensten Menu',
         id_card = 'ID Kaart',
         driver_license = 'Rijbewijs',
-        weaponlicense = 'Vuurwapen Licentie',
+        weaponlicense = 'Wapen Licentie',
         new_job = 'Gefeliciteerd met je nieuwe baan! (%{job})'
     },
     email = {
         jobAppSender = "%{job}",
-        jobAppSub = "Thank you for applying to %(job).",
-        jobAppMsg = "Hello %{gender} %{lastname}<br /><br />%{job} has received your application.<br /><br />The boss is looking into your request and will reach out to you for an interview at their earliest convienance.<br /><br />Once again, thank you for your application.",
+        jobAppSub = "Bedankt voor de sollicitatie voor de baan: %(job).",
+        jobAppMsg = "Hallo %{gender} %{lastname}<br /><br />%{job} heeft uw sollicitatie ontvangen<br /><br />Je sollicitatie zal doorgenomen worden, er zal zo spoedig mogelijk contact met u worden opgenomen.<br /><br />Nogmaals dank voor je sollicitatie",
         mr = 'Dhr',
         mrs = 'Mvr',
         sender = 'Gemeente',

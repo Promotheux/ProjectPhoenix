@@ -4,7 +4,7 @@ qbMultiCharacters = {}
 var Loaded = false;
 var NChar = null;
 var EnableDeleteButton = false;
-var dollar = Intl.NumberFormat('en-US');
+var dollar = Intl.NumberFormat('nl-NL');
 
 $(document).ready(function (){
     window.addEventListener('message', function (event) {
@@ -98,10 +98,10 @@ function setupCharInfo(cData) {
         '<div class="character-info-box"><span id="info-label">Nationaliteit: </span><span class="char-info-js">'+cData.charinfo.nationality+'</span></div>' +
         '<div class="character-info-box"><span id="info-label">Baan: </span><span class="char-info-js">'+cData.job.label+'</span></div>' +
 	    '<div class="character-info-box"><span id="info-label">Functie: </span><span class="char-info-js">' + cData.job.grade.name + '</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Cash: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.cash)+'€</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Bank: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.bank)+'€</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Cash: </span><span class="char-info-js">&euro; '+dollar.format(cData.money.cash)+'</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Bank: </span><span class="char-info-js">&euro; '+dollar.format(cData.money.bank)+'</span></div>' +
         '<div class="character-info-box"><span id="info-label">Telefoonnummer: </span><span class="char-info-js">'+cData.charinfo.phone+'</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Account: </span><span class="char-info-js">'+cData.charinfo.account+'</span></div>');
+        '<div class="character-info-box"><span id="info-label">Rekeningnummer: </span><span class="char-info-js">'+cData.charinfo.account+'</span></div>');
     }
 }
 

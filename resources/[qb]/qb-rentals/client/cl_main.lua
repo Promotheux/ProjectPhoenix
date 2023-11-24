@@ -36,13 +36,13 @@ RegisterNetEvent('qb-rental:client:openMenu', function(data)
 
     local vehMenu = {
         [1] = {
-            header = "Rental Vehicles",
+            header = "Huur voertuigen",
             isMenuHeader = true,
         },
     
         [2] = {
             id = 1,
-            header = "Return Vehicle ",
+            header = "Breng voertuig terug",
             txt = Lang:t("task.return_veh"),
             params = {
                 event = "qb-rental:client:return",
@@ -57,7 +57,7 @@ RegisterNetEvent('qb-rental:client:openMenu', function(data)
             vehMenu[#vehMenu+1] = {
                 id = k+1,
                 header = name,
-                txt = ("$%s"):format(comma_value(Config.Vehicles.land[k].money)),
+                txt = ("€ %s,-"):format(comma_value(Config.Vehicles.land[k].money)),
                 params = {
                     event = "qb-rental:client:spawncar",
                     args = {
@@ -74,7 +74,7 @@ RegisterNetEvent('qb-rental:client:openMenu', function(data)
             vehMenu[#vehMenu+1] = {
                 id = k+1,
                 header = name,
-                txt = ("$%s"):format(comma_value(Config.Vehicles.air[k].money)),
+                txt = ("€ %s,-"):format(comma_value(Config.Vehicles.air[k].money)),
                 params = {
                     event = "qb-rental:client:spawncar",
                     args = {
@@ -92,7 +92,7 @@ RegisterNetEvent('qb-rental:client:openMenu', function(data)
             vehMenu[#vehMenu+1] = {
                 id = k+1,
                 header = name,
-                txt = ("$%s"):format(comma_value(Config.Vehicles.sea[k].money)),
+                txt = ("€ %s,-"):format(comma_value(Config.Vehicles.sea[k].money)),
                 params = {
                     event = "qb-rental:client:spawncar",
                     args = {

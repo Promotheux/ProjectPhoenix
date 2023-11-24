@@ -405,7 +405,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:StopSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -417,7 +417,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:WalkingManSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -429,7 +429,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:DontBlockIntersectionSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -441,7 +441,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:UTurnSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -453,7 +453,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:NoParkingSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -465,7 +465,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:LeftTurnSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -477,7 +477,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:RightTurnSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -489,7 +489,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:NoTrespassingSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 
@@ -501,7 +501,7 @@ CreateThread(function()
                 type = 'client',
                 event = "qb-signrobbery:client:YieldSign",
                 icon = 'fas fa-user-secret',
-                label = 'Steal Sign',
+                label = 'Verkeersbord Stelen',
             }
         },
         distance = 4.0, 

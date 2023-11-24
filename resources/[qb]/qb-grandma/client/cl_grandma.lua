@@ -9,7 +9,7 @@ end)
 RegisterNetEvent("qb-grandma:request:help", function()
     if QBCore.Functions.GetPlayerData().metadata.isdead or QBCore.Functions.GetPlayerData().metadata.inlaststand then 
         if QBCore.Functions.GetPlayerData().money['cash'] >= Shared.GrandmaCost then 
-            QBCore.Functions.Progressbar('name_here', 'Grandma is healing you..', 45000, false, false, {
+            QBCore.Functions.Progressbar('name_here', 'Oma helpt je aan jou verwondingen...', 45000, false, false, {
                 disableMovement = true,
                 disableCarMovement = true,
                 disableMouse = false,
@@ -17,13 +17,13 @@ RegisterNetEvent("qb-grandma:request:help", function()
             }, {}, {}, {}, function()
                 TriggerServerEvent("qb-grandma:revive")
             end, function()
-                QBCore.Functions.Notify("Canceled", "error")
+                QBCore.Functions.Notify("Geannuleerd", "error")
             end)
         else
-            QBCore.Functions.Notify("Grandma won't help, if you don't have some cash for her", "error", 5000)
+            QBCore.Functions.Notify("Oma wil jou niet helpen, zolang je geen cash op zak hebt", "error", 5000)
         end
     else
-        QBCore.Functions.Notify("You look healthy to grandma", "error")
+        QBCore.Functions.Notify("Je ziet er gezond uit volgens oma", "error")
     end
 end)
 
@@ -36,7 +36,7 @@ RegisterPed = function(cData)
             {
                 event = 'qb-grandma:request:help',
                 icon = 'fas fa-user-injured',
-                label = 'Request help from grandma - '..Shared.GrandmaCost..'$',
+                label = 'Vraag hulp aan oma - €'..Shared.GrandmaCost.. '',
             },
         },
         distance = 2
