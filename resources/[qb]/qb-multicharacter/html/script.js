@@ -17,7 +17,7 @@ $(document).ready(function (){
                 $(".welcomescreen").fadeIn(150);
                 qbMultiCharacters.resetAll();
 
-                var originalText = "Loading.";
+                var originalText = "Laden.";
                 var loadingProgress = 0;
                 var loadingDots = 0;
                 $("#loading-text").html(originalText);
@@ -26,15 +26,15 @@ $(document).ready(function (){
                     loadingDots++;
                     loadingProgress++;
                     if (loadingProgress == 3) {
-                        originalText = "Loading.."
+                        originalText = "Laden.."
                         $("#loading-text").html(originalText);
                     }
                     if (loadingProgress == 4) {
-                        originalText = "Loading.."
+                        originalText = "Laden.."
                         $("#loading-text").html(originalText);
                     }
                     if (loadingProgress == 6) {
-                        originalText = "Loading..."
+                        originalText = "Laden..."
                         $("#loading-text").html(originalText);
                     }
                     if(loadingDots == 4) {
@@ -49,7 +49,7 @@ $(document).ready(function (){
                     setTimeout(function(){
                         clearInterval(DotsInterval);
                         loadingProgress = 0;
-                        originalText = "Retrieving data";
+                        originalText = "Gegevens ophalen";
                         $(".welcomescreen").fadeOut(150);
                         qbMultiCharacters.fadeInDown('.characters-list', '76%', 1);
                         $(".btns").css({"display":"block"});
@@ -90,17 +90,17 @@ function setupCharInfo(cData) {
         $('.character-info-valid').html('<span id="no-char"><br><br></span>');
     } else {
         var gender = "Man"
-        if (cData.charinfo.gender == 1) { gender = "Woman" }
+        if (cData.charinfo.gender == 1) { gender = "Vrouw" }
         $('.character-info-valid').html(
-        '<div class="character-info-box"><span id="info-label">Name: </span><span class="char-info-js">'+cData.charinfo.firstname+' '+cData.charinfo.lastname+'</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Birth: </span><span class="char-info-js">'+cData.charinfo.birthdate+'</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Sex: </span><span class="char-info-js">'+gender+'</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Nationality: </span><span class="char-info-js">'+cData.charinfo.nationality+'</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Job: </span><span class="char-info-js">'+cData.job.label+'</span></div>' +
-	    '<div class="character-info-box"><span id="info-label">Grade: </span><span class="char-info-js">' + cData.job.grade.name + '</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Cash: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.cash)+'$</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Bank: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.bank)+'$</span></div>' +
-        '<div class="character-info-box"><span id="info-label">Phone number: </span><span class="char-info-js">'+cData.charinfo.phone+'</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Naam: </span><span class="char-info-js">'+cData.charinfo.firstname+' '+cData.charinfo.lastname+'</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Geboortedatum: </span><span class="char-info-js">'+cData.charinfo.birthdate+'</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Geslacht: </span><span class="char-info-js">'+gender+'</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Nationaliteit: </span><span class="char-info-js">'+cData.charinfo.nationality+'</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Baan: </span><span class="char-info-js">'+cData.job.label+'</span></div>' +
+	    '<div class="character-info-box"><span id="info-label">Functie: </span><span class="char-info-js">' + cData.job.grade.name + '</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Cash: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.cash)+'€</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Bank: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.bank)+'€</span></div>' +
+        '<div class="character-info-box"><span id="info-label">Telefoonnummer: </span><span class="char-info-js">'+cData.charinfo.phone+'</span></div>' +
         '<div class="character-info-box"><span id="info-label">Account: </span><span class="char-info-js">'+cData.charinfo.account+'</span></div>');
     }
 }
@@ -224,14 +224,14 @@ $(document).on('click', '#create', function (e) {
     const regTest = new RegExp(re, 'i');
 
     if (!firstname || !lastname || !nationality || !birthdate){
-        var reqFieldErr = '<p>Du har missat att skriva något!</p>'
+        var reqFieldErr = '<p>Niet alles is ingevuld</p>'
         $('.error-msg').html(reqFieldErr)
         $('.error').fadeIn(400)
         return false;
     }
 
     if(regTest.test(firstname) || regTest.test(lastname)){
-        var profanityErr = '<p>You have used a bad word, try again!<p>'
+        var profanityErr = '<p>Je hebt een slecht woord gebruikt, probeer het opnieuw!<p>'
         $('.error-msg').html(profanityErr)
         $('.error').fadeIn(400)
         return false;
@@ -278,7 +278,7 @@ function setCharactersList() {
     var htmlResult = '<div class="character-list-header"></div>'
     htmlResult += '<div class="characters">'
     for (let i = 1; i <= NChar; i++) {
-        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="user"><i class="fa-solid fa-plus"></i></div><span id="slot-name">Empty slot<span id="cid"></span></span></div>'
+        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="user"><i class="fa-solid fa-plus"></i></div><span id="slot-name">Leeg slot<span id="cid"></span></span></div>'
     }
     htmlResult += '</div>'
     $('.characters-list').html(htmlResult)
@@ -287,7 +287,7 @@ function setCharactersList() {
 function refreshCharacters() {
     var htmlResult = ''
     for (let i = 1; i <= NChar; i++) {
-        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="user"><i class="fa-solid fa-plus"></i></div><span id="slot-name">Empty slot<span id="cid"></span></span></div>'
+        htmlResult += '<div class="character" id="char-'+ i +'" data-cid=""><div class="user"><i class="fa-solid fa-plus"></i></div><span id="slot-name">Leeg slot<span id="cid"></span></span></div>'
     }
 
     $('.characters-list').html(htmlResult)
