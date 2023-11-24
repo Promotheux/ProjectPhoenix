@@ -3,8 +3,8 @@ RegisterNetEvent('um-idcard:server:sendData', function(src,metadata)
         lib.callback('um-idcard:client:callBack:getClosestPlayer', src, function(player)
             if player ~= 0 then
                 TriggerClientEvent('um-idcard:client:notifyOx', src, {
-                    title = 'You showed your idcard', 
-                    desc = 'You are showing your ID Card to the closest player',
+                    title = 'Je hebt je ID Kaart laten zien', 
+                    desc = 'Je laat je ID kaart zien aan de dichtstbijzijnde speler',
                     icon = 'id-card',
                     iconColor = 'green'
                 })
