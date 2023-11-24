@@ -21,5 +21,5 @@ end
 lib.registerContext({identityMenu})
 
 RegisterNetEvent('um-idcard-npc:client:OxNotify', function(itemName)
-  lib.notify({title = 'Identity Menu', description = 'Your identity has been approved: ' ..itemName, icon = 'id-card'})
+  lib.notify({title = 'Identiteits Menu', description = 'Jouw identiteit is vastgesteld: ' ..itemName, icon = 'id-card'})
 end)
